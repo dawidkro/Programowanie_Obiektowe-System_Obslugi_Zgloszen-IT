@@ -1,4 +1,4 @@
-Jako Zgłaszający
+1. Jako Zgłaszający
 chcę stworzyć zgłoszenie z opisem problemu, priorytetem i kategorią,
 aby Administrator mógł je ocenić, a następnie zdecydować, komu je przydzielić.
 
@@ -6,7 +6,7 @@ Kryterium akceptacji: tworzy się nowe zgłoszenie z unikalnym ID, opisem proble
 
 
 
-Jako Administrator
+2. Jako Administrator
 chcę przydzielić zgłoszenie wybranemu technikowi,
 aby Technik wiedział, jakimi zgłoszeniami ma się zajmować.
 
@@ -14,7 +14,7 @@ Kryterium akceptacji: zgłoszenie zostaje przypisane do wybranego technika i poj
 
 
 
-Jako Technik
+3. Jako Technik
 chcę zmienić status zgłoszenia i dodać do niego komentarz,
 aby rejestrować postępy pracy i poinformować Zgłaszającego/Administratora, że zgłoszenie jest rozwiązane.
 
@@ -22,7 +22,7 @@ Kryterium akceptacji: status może zmienić tylko technik przypisany do zgłosze
 
 
 
-Jako Technik/Administrator
+4. Jako Technik/Administrator
 chcę wyświetlić listę zgłoszeń,
 aby zobaczyć, co jest do zrobienia.
 
@@ -30,7 +30,7 @@ Kryterium akceptacji: system zwraca zgłoszenia, każde z ID, statusem, prioryte
 
 
 
-Jako Technik/Administrator
+5. Jako Technik/Administrator
 chcę wyświetlić historię wpisów danego zgłoszenia,
 aby kontrolować postępy prac i przypomnieć sobie, jak wyglądała praca nad zgłoszeniem.
 
@@ -38,7 +38,7 @@ Kryterium akceptacji: system wyświetla wszystkie wpisy historii wybranego zgło
 
 
 
-Jako Zgłaszający
+6. Jako Zgłaszający
 chcę sprawdzić status mojego zgłoszenia,
 aby wiedzieć, na jakim etapie są prace nad zgłoszeniem.
 
