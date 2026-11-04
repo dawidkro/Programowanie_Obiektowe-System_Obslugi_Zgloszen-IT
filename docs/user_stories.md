@@ -43,3 +43,11 @@ chcę sprawdzić status mojego zgłoszenia,
 aby wiedzieć, na jakim etapie są prace nad zgłoszeniem.
 
 Kryterium akceptacji: po podaniu ID system wyświetla status zgłoszenia. Jeśli zgłoszenie o tym ID nie istnieje albo nie należy do tego zgłaszającego, system wyświetla odpowiedni komunikat.
+
+
+
+7. Jako Zgłaszający 
+chcę wyświetlić komentarze do mojego zgłoszenia, 
+aby wiedzieć, co technik ustalił w sprawie mojego problemu. 
+
+Kryterium akceptacji: system wyświetla komentarze wybranego zgłoszenia w kolejności chronologicznej, każdy z treścią, autorem i datą. Jeśli zgłoszenie nie należy do tego zgłaszającego, system wyświetla odpowiedni komunikat.
