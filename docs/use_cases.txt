@@ -1,0 +1,42 @@
+Przypadki użycia:
+1. Stwórz zgłoszenie
+Aktor: Zgłaszający
+Opis: Zgłaszający tworzy zgłoszenie, podając opis, priorytet i kategorię.
+Powiązanie z User Story: Odpowiada pierwszej historii użytkownika(tworzenie zgłoszenia).
+
+2. Przydziel zgłoszenie
+Aktor: Administrator
+Opis: Administrator przydziela zgłoszenie konkretnemu Technikowi.
+Powiązanie z User Story: Odpowiada drugiej historii użytkownika(przydzielanie zgłoszenia).
+
+3. Dodaj komentarz
+Aktor: Technik
+Opis: Technik dodaje komentarz do danego zgłoszenia.
+Powiązanie z User Story: Odpowiada trzeciej historii użytkownika(zmiana statusu i dodawanie komentarza).
+
+4. Zmień status zgłoszenia
+Aktor: Technik
+Opis: Status może zmienić tylko Technik przypisany do zgłoszenia. Technik zmienia status zgłoszenia na jeden z 3(W trakcie, Oczekuje, Rozwiązane), zgodnie z regułami zmian statusu.
+Powiązanie z User Story: Odpowiada trzeciej historii użytkownika(zmiana statusu i dodawanie komentarza).
+
+5. Wyświetl listę zgłoszeń
+Aktorzy: Technik, Administrator
+Opis: Aktor wyświetla listę zgłoszeń. Technik widzi tylko zgłoszenia przypisane do siebie, Administrator wszystkie.
+Powiązanie z User Story: Odpowiada czwartej historii użytkownika(wyświetlenie listy zgłoszeń).
+
+6. Wyświetl historię wpisów
+Aktorzy: Technik, Administrator
+Opis: Aktor wyświetla historię wpisów danego zgłoszenia.
+Powiązanie z User Story: Odpowiada piątej historii użytkownika(wyświetlenie historii wpisów zgłoszenia).
+
+7. Sprawdź status zgłoszenia
+Aktor: Zgłaszający
+Opis: Zgłaszający sprawdza status swojego zgłoszenia.
+Powiązanie z User Story: Odpowiada szóstej historii użytkownika(sprawdzanie statusu zgłoszenia).
+
+8. Wyświetl komentarze zgłoszenia
+Aktor: Zgłaszający
+Opis: Zgłaszający wyświetla komentarze konkretnego(swojego) zgłoszenia.
+Powiązanie z User Story: Odpowiada siódmej historii użytkownika(wyświetlenie komentarzy zgłoszenia).
+
+Relacje «include»/«extend»: brak. Przypadki użycia są od siebie niezależne.
