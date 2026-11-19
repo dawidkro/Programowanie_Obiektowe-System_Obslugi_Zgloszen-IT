@@ -1,10 +1,10 @@
 #include "Zglaszajacy.h"
 #include "Zgloszenie.h"
 
-Zglaszajacy::Zglaszajacy(int id, const std::string& imie, const std::string& nazwisko)
+Zglaszajacy::Zglaszajacy(int id, const std::string& imie,
+                         const std::string& nazwisko)
     : PracownikSystemu(id, imie, nazwisko) {}
 
-
-bool Zglaszajacy::czyMaDostep(const Zgloszenie& /*zgloszenie*/) const {
-    return false;
+bool Zglaszajacy::czyMaDostep(const Zgloszenie& zgloszenie) const {
+    return zgloszenie.getZglaszajacy() == this;
 }
