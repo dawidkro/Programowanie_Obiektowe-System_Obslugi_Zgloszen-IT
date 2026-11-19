@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <memory>
 #include <string>
@@ -241,34 +240,22 @@ void demoUs2(SystemHelpdesk& system, const Demo& demo) {
 }
 
 void demoUs3(SystemHelpdesk& system, const Demo& demo) {
-    naglowek("US3: Technik zmienia status i dodaje komentarze");
+    naglowek("US3: Technik zmienia status zgloszenia");
     int id = demo.drukarka_id;
     sprobujZmienicStatus(system, id, Status::W_TRAKCIE, demo.anna);
-    sprobujDodacKomentarz(system, id, demo.anna,
-                          "Sprawdzam drukarke na miejscu.");
     sprobujZmienicStatus(system, id, Status::OCZEKUJE, demo.anna);
-    sprobujDodacKomentarz(system, id, demo.anna,
-                          "Uszkodzony beben, czekam na dostawe czesci.");
-
-    std::cout << "  Proby niedozwolone:\n";
-    sprobujZmienicStatus(system, id, Status::ROZWIAZANE, demo.piotr,
-                         "Piotr nie jest przypisany do zgloszenia");
-    sprobujDodacKomentarz(system, id, demo.piotr, "Moge pomoc?",
-                          "brak dostepu do zgloszenia");
-    sprobujZmienicStatus(system, demo.vpn_id, Status::ROZWIAZANE, demo.anna,
-                         "przejscie Nowe -> Rozwiazane jest niedozwolone");
-
-    std::cout << "  Dokonczenie pracy:\n";
     sprobujZmienicStatus(system, id, Status::W_TRAKCIE, demo.anna);
-    sprobujDodacKomentarz(system, id, demo.anna,
-                          "Wymieniono beben, drukarka dziala.");
     sprobujZmienicStatus(system, id, Status::ROZWIAZANE, demo.anna);
-    sprobujZmienicStatus(system, id, Status::W_TRAKCIE, demo.anna,
-                         "zgloszenia rozwiazanego nie mozna wznowic");
     sprobujZmienicStatus(system, demo.excel_id, Status::W_TRAKCIE,
                          demo.piotr);
-    sprobujDodacKomentarz(system, demo.excel_id, demo.piotr,
-                          "Naprawiam instalacje pakietu Office.");
+
+    std::cout << "  Proby niedozwolone:\n";
+    sprobujZmienicStatus(system, demo.vpn_id, Status::W_TRAKCIE, demo.piotr,
+                         "Piotr nie jest przypisany do zgloszenia");
+    sprobujZmienicStatus(system, demo.vpn_id, Status::ROZWIAZANE, demo.anna,
+                         "przejscie Nowe -> Rozwiazane jest niedozwolone");
+    sprobujZmienicStatus(system, id, Status::W_TRAKCIE, demo.anna,
+                         "zgloszenia rozwiazanego nie mozna wznowic");
 
     std::cout << "  Regula z US2 - rozwiazanego zgloszenia nie da sie "
                  "przydzielic:\n";
@@ -276,32 +263,52 @@ void demoUs3(SystemHelpdesk& system, const Demo& demo) {
                        "zgloszenie ma status Rozwiazane");
 }
 
-void demoUs4(const SystemHelpdesk& system, const Demo& demo) {
-    naglowek("US4: Lista zgloszen (technik - swoje, administrator - "
+void demoUs4(SystemHelpdesk& system, const Demo& demo) {
+    naglowek("US4: Dodawanie komentarzy (kazdy, kto ma dostep do zgloszenia)");
+    sprobujDodacKomentarz(system, demo.drukarka_id, demo.anna,
+                          "Wymieniono beben, drukarka dziala.");
+    sprobujDodacKomentarz(system, demo.drukarka_id, demo.jan,
+                          "Potwierdzam, drukarka drukuje. Dziekuje!");
+    sprobujDodacKomentarz(system, demo.vpn_id, demo.admin,
+                          "Pilne - VPN jest potrzebny do pracy zdalnej.");
+    sprobujDodacKomentarz(system, demo.excel_id, demo.piotr,
+                          "Naprawiam instalacje pakietu Office.");
+
+    std::cout << "  Proby niedozwolone:\n";
+    sprobujDodacKomentarz(system, demo.drukarka_id, demo.piotr, "Moge pomoc?",
+                          "Piotr nie jest przypisany do zgloszenia");
+    sprobujDodacKomentarz(system, demo.drukarka_id, demo.ewa, "A moje?",
+                          "to nie jest zgloszenie Ewy");
+    sprobujDodacKomentarz(system, demo.excel_id, demo.piotr, "",
+                          "pusty komentarz");
+}
+
+void demoUs5(const SystemHelpdesk& system, const Demo& demo) {
+    naglowek("US5: Lista zgloszen (technik - swoje, administrator - "
              "wszystkie)");
     pokazListe(system, demo.anna, "Technik");
     pokazListe(system, demo.piotr, "Technik");
     pokazListe(system, demo.admin, "Administrator");
 }
 
-void demoUs5(const SystemHelpdesk& system, const Demo& demo) {
-    naglowek("US5: Historia wpisow zgloszenia (audit log)");
+void demoUs6(const SystemHelpdesk& system, const Demo& demo) {
+    naglowek("US6: Historia wpisow zgloszenia (audit log)");
     for (int id : {demo.drukarka_id, demo.excel_id}) {
         std::cout << "  Zgloszenie " << numer(id) << ":\n";
         wypiszHistorie(system.pobierzHistorieWpisow(id));
     }
 }
 
-void demoUs6(const SystemHelpdesk& system, const Demo& demo) {
-    naglowek("US6: Zglaszajacy sprawdza status swojego zgloszenia");
+void demoUs7(const SystemHelpdesk& system, const Demo& demo) {
+    naglowek("US7: Zglaszajacy sprawdza status swojego zgloszenia");
     pokazStatus(system, demo.drukarka_id, demo.jan);
     pokazStatus(system, demo.vpn_id, demo.jan);
     pokazStatus(system, demo.drukarka_id, demo.ewa);
     pokazStatus(system, 99, demo.jan);
 }
 
-void demoUs7(const SystemHelpdesk& system, const Demo& demo) {
-    naglowek("US7: Zglaszajacy wyswietla komentarze do swojego zgloszenia");
+void demoUs8(const SystemHelpdesk& system, const Demo& demo) {
+    naglowek("US8: Zglaszajacy wyswietla komentarze do swojego zgloszenia");
     pokazKomentarze(system, demo.drukarka_id, demo.jan);
     pokazKomentarze(system, demo.excel_id, demo.ewa);
     pokazKomentarze(system, demo.drukarka_id, demo.ewa);
@@ -320,5 +327,9 @@ int main() {
     demoUs5(system, demo);
     demoUs6(system, demo);
     demoUs7(system, demo);
+    demoUs8(system, demo);
+    return 0;
+}
+
     return 0;
 }
