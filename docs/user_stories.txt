@@ -1,8 +1,3 @@
-Opis systemu
-System Obsługi Zgłoszeń IT to aplikacja, w której pracownicy firmy zgłaszają problemy techniczne, a dział IT je obsługuje. Zgłaszający tworzy zgłoszenie z opisem problemu, priorytetem i kategorią, a potem może sprawdzać jego status i czytać komentarze. Administrator widzi wszystkie zgłoszenia i przydziela je wybranym technikom. Technik pracuje nad przydzielonymi mu zgłoszeniami i zmienia ich status według ustalonych reguł (Nowe → W trakcie → Oczekuje → Rozwiązane), a każdy, kto ma dostęp do zgłoszenia, może dodać do niego komentarz. Każda zmiana stanu zgłoszenia jest automatycznie zapisywana w historii z datą i autorem, więc system prowadzi pełny audit log.
-
-
-
 1. Jako Zgłaszający
 chcę stworzyć zgłoszenie z opisem problemu, priorytetem i kategorią,
 aby Administrator mógł je ocenić, a następnie zdecydować, komu je przydzielić.
