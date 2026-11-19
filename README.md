@@ -14,7 +14,7 @@ użytkownicy, którzy mają dostęp do zgłoszenia. Każda zmiana zapisuje się
 automatycznie w historii zgłoszenia razem z datą i autorem, więc zawsze wiadomo,
 kto i kiedy coś zrobił.
 
-Pełna lista User Stories: [docs/user_stories.md](docs/user_stories.md).
+Pełna lista User Stories: [docs/user_stories.txt](docs/user_stories.txt).
 
 ## Wymagania
 
@@ -39,7 +39,7 @@ g++ -std=c++17 -Wall -Wextra -Iinclude src/*.cpp -o helpdesk
 
 | Plik                                                   | Zawartość                       |
 |--------------------------------------------------------|---------------------------------|
-| [docs/user_stories.md](docs/user_stories.md)           | opis systemu i User Stories     |
+| [docs/user_stories.txt](docs/user_stories.txt)           | opis systemu i User Stories     |
 | [docs/use_cases.txt](docs/use_cases.txt)               | opis przypadków użycia          |
 | [docs/diagram_sekwencji.md](docs/diagram_sekwencji.md) | opis diagramu sekwencji         |
 

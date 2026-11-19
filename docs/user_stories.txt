@@ -1,0 +1,66 @@
+Opis systemu
+System Obsługi Zgłoszeń IT to aplikacja, w której pracownicy firmy zgłaszają problemy techniczne, a dział IT je obsługuje. Zgłaszający tworzy zgłoszenie z opisem problemu, priorytetem i kategorią, a potem może sprawdzać jego status i czytać komentarze. Administrator widzi wszystkie zgłoszenia i przydziela je wybranym technikom. Technik pracuje nad przydzielonymi mu zgłoszeniami i zmienia ich status według ustalonych reguł (Nowe → W trakcie → Oczekuje → Rozwiązane), a każdy, kto ma dostęp do zgłoszenia, może dodać do niego komentarz. Każda zmiana stanu zgłoszenia jest automatycznie zapisywana w historii z datą i autorem, więc system prowadzi pełny audit log.
+
+
+
+1. Jako Zgłaszający
+chcę stworzyć zgłoszenie z opisem problemu, priorytetem i kategorią,
+aby Administrator mógł je ocenić, a następnie zdecydować, komu je przydzielić.
+
+Kryterium akceptacji: tworzy się nowe zgłoszenie z unikalnym ID, opisem problemu, priorytetem i kategorią. Ma status „Nowe” i nie jest przypisane do żadnego technika. Do historii zgłoszenia dodawany jest wpis o jego utworzeniu (data i autor).
+
+
+
+2. Jako Administrator
+chcę przydzielić zgłoszenie wybranemu technikowi,
+aby Technik wiedział, jakimi zgłoszeniami ma się zajmować.
+
+Kryterium akceptacji: zgłoszenie zostaje przypisane do wybranego technika i pojawia się na liście jego zgłoszeń. Przydzielenie jest zapisywane w historii (data i autor). Nie da się przydzielić zgłoszenia, które ma status „Rozwiązane”.
+
+
+
+3. Jako Technik
+chcę zmienić status zgłoszenia,
+aby rejestrować postępy pracy i poinformować Zgłaszającego/Administratora, że zgłoszenie jest rozwiązane.
+
+Kryterium akceptacji: status może zmienić tylko technik przypisany do zgłoszenia. Dozwolone są wyłącznie poprawne przejścia (Nowe → W trakcie; W trakcie → Oczekuje; Oczekuje -> W trakcie; W trakcie → Rozwiązane; Oczekuje -> Rozwiązane), a niedozwolone przejście jest odrzucane. Każda zmiana statusu automatycznie tworzy wpis w historii z datą, autorem i opisem zmiany.
+
+
+
+4. Jako Zgłaszający/Technik/Administrator
+chcę dodać komentarz do zgłoszenia,
+aby przekazać innym osobom pracującym nad zgłoszeniem informacje o problemie lub postępie prac.
+
+Kryterium akceptacji: komentarz może dodać każdy, kto ma dostęp do zgłoszenia (Zgłaszający do swojego zgłoszenia, Technik do przydzielonego, Administrator do każdego). Komentarz zapisuje się przy zgłoszeniu z treścią, autorem i datą. Pusty komentarz lub komentarz bez dostępu jest odrzucany.
+
+
+
+5. Jako Technik/Administrator
+chcę wyświetlić listę zgłoszeń,
+aby zobaczyć, co jest do zrobienia.
+
+Kryterium akceptacji: system zwraca zgłoszenia, każde z ID, statusem, priorytetem, kategorią i opisem. Technik widzi tylko zgłoszenia przypisane do siebie, a Administrator widzi wszystkie.
+
+
+
+6. Jako Technik/Administrator
+chcę wyświetlić historię wpisów danego zgłoszenia,
+aby kontrolować postępy prac i przypomnieć sobie, jak wyglądała praca nad zgłoszeniem.
+
+Kryterium akceptacji: system wyświetla wszystkie wpisy historii wybranego zgłoszenia w kolejności chronologicznej, każdy z datą, autorem i opisem zmiany.
+
+
+
+7. Jako Zgłaszający
+chcę sprawdzić status mojego zgłoszenia,
+aby wiedzieć, na jakim etapie są prace nad zgłoszeniem.
+
+Kryterium akceptacji: po podaniu ID system wyświetla status zgłoszenia. Jeśli zgłoszenie o tym ID nie istnieje albo nie należy do tego zgłaszającego, system wyświetla odpowiedni komunikat.
+
+
+
+8. Jako Zgłaszający
+chcę wyświetlić komentarze do mojego zgłoszenia,
+aby wiedzieć, co technik ustalił w sprawie mojego problemu.
+
+Kryterium akceptacji: system wyświetla komentarze wybranego zgłoszenia w kolejności chronologicznej, każdy z treścią, autorem i datą. Jeśli zgłoszenie nie należy do tego zgłaszającego, system wyświetla odpowiedni komunikat.
