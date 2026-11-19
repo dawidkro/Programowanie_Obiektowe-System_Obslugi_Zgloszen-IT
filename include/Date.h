@@ -2,10 +2,13 @@
 #include <string>
 
 class Date {
-private:
-    std::string dataTekst;
-
 public:
-    Date(const std::string& dataTekst = "2026-01-01");
+    explicit Date(const std::string& data_tekst = "2026-01-01");
+
+    static Date teraz();
+
     std::string toString() const;
+
+private:
+    std::string data_tekst_;
 };
