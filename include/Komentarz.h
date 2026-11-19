@@ -4,15 +4,16 @@
 #include "PracownikSystemu.h"
 
 class Komentarz {
-private:
-    std::string tresc;
-    Date dataUtworzenia;
-    PracownikSystemu* autor;
-
 public:
-    Komentarz(const std::string& tresc, const Date& dataUtworzenia, PracownikSystemu* autor);
+    Komentarz(const std::string& tresc, const Date& data_utworzenia,
+              PracownikSystemu* autor);
 
     std::string getTresc() const;
     Date getData() const;
     PracownikSystemu* getAutor() const;
+
+private:
+    std::string tresc_;
+    Date data_utworzenia_;
+    PracownikSystemu* autor_;
 };
