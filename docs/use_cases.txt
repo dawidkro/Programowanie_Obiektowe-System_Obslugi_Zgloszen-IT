@@ -11,8 +11,8 @@ Powiązanie z User Story: Odpowiada drugiej historii użytkownika(przydzielanie 
 
 3. Zmień status zgłoszenia
 Aktor: Technik
-Opis: Status może zmienić tylko Technik przypisany do zgłoszenia. Technik zmienia status zgłoszenia na jeden z 3(W trak>
-Powiązanie z User Story: Odpowiada trzeciej historii użytkownika(zmiana statusu).
+Opis: Status może zmienić tylko Technik przypisany do zgłoszenia. Technik zmienia status zgłoszenia na jeden z 3 (W trakcie, Oczekuje, Rozwiązane), zgodnie z regułami zmian statusu.
+Powiązanie z User Story: Odpowiada trzeciej historii użytkownika (zmiana statusu).
 
 4. Dodaj komentarz
 Aktorzy: Zgłaszający, Technik, Administrator
