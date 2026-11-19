@@ -15,14 +15,22 @@ Kryterium akceptacji: zgłoszenie zostaje przypisane do wybranego technika i poj
 
 
 3. Jako Technik
-chcę zmienić status zgłoszenia i dodać do niego komentarz,
+chcę zmienić status zgłoszenia,
 aby rejestrować postępy pracy i poinformować Zgłaszającego/Administratora, że zgłoszenie jest rozwiązane.
 
-Kryterium akceptacji: status może zmienić tylko technik przypisany do zgłoszenia. Dozwolone są wyłącznie poprawne przejścia (Nowe → W trakcie; W trakcie → Oczekuje; Oczekuje -> W trakcie; W trakcie → Rozwiązane; Oczekuje -> Rozwiązane), a niedozwolone przejście jest odrzucane. Każda zmiana statusu automatycznie tworzy wpis w historii z datą, autorem i opisem zmiany. Dodany komentarz zapisuje się przy zgłoszeniu.
+Kryterium akceptacji: status może zmienić tylko technik przypisany do zgłoszenia. Dozwolone są wyłącznie poprawne przejścia (Nowe → W trakcie; W trakcie → Oczekuje; Oczekuje -> W trakcie; W trakcie → Rozwiązane; Oczekuje -> Rozwiązane), a niedozwolone przejście jest odrzucane. Każda zmiana statusu automatycznie tworzy wpis w historii z datą, autorem i opisem zmiany. 
 
 
 
-4. Jako Technik/Administrator
+4. Jako Zgłaszający/Technik/Administrator
+chcę dodać komentarz do zgłoszenia,
+aby przekazać innym osobom pracującym nad zgłoszeniem informacje o problemie lub postępie prac.
+
+Kryterium akceptacji: komentarz może dodać każdy, kto ma dostęp do zgłoszenia (Zgłaszający do swojego zgłoszenia, Technik do przydzielonego, Administrator do każdego). Komentarz zapisuje się przy zgłoszeniu z treścią, autorem i datą. Pusty komentarz lub komentarz bez dostępu jest odrzucany.
+
+
+
+5. Jako Technik/Administrator
 chcę wyświetlić listę zgłoszeń,
 aby zobaczyć, co jest do zrobienia.
 
@@ -30,7 +38,7 @@ Kryterium akceptacji: system zwraca zgłoszenia, każde z ID, statusem, prioryte
 
 
 
-5. Jako Technik/Administrator
+6. Jako Technik/Administrator
 chcę wyświetlić historię wpisów danego zgłoszenia,
 aby kontrolować postępy prac i przypomnieć sobie, jak wyglądała praca nad zgłoszeniem.
 
@@ -38,7 +46,7 @@ Kryterium akceptacji: system wyświetla wszystkie wpisy historii wybranego zgło
 
 
 
-6. Jako Zgłaszający
+7. Jako Zgłaszający
 chcę sprawdzić status mojego zgłoszenia,
 aby wiedzieć, na jakim etapie są prace nad zgłoszeniem.
 
@@ -46,7 +54,7 @@ Kryterium akceptacji: po podaniu ID system wyświetla status zgłoszenia. Jeśli
 
 
 
-7. Jako Zgłaszający 
+8. Jako Zgłaszający 
 chcę wyświetlić komentarze do mojego zgłoszenia, 
 aby wiedzieć, co technik ustalił w sprawie mojego problemu. 
 

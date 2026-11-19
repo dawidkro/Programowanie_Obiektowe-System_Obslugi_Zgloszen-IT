@@ -9,15 +9,15 @@ Aktor: Administrator
 Opis: Administrator przydziela zgłoszenie konkretnemu Technikowi.
 Powiązanie z User Story: Odpowiada drugiej historii użytkownika(przydzielanie zgłoszenia).
 
-3. Dodaj komentarz
+3. Zmień status zgłoszenia
 Aktor: Technik
-Opis: Technik dodaje komentarz do danego zgłoszenia.
-Powiązanie z User Story: Odpowiada trzeciej historii użytkownika(zmiana statusu i dodawanie komentarza).
+Opis: Status może zmienić tylko Technik przypisany do zgłoszenia. Technik zmienia status zgłoszenia na jeden z 3(W trak>
+Powiązanie z User Story: Odpowiada trzeciej historii użytkownika(zmiana statusu).
 
-4. Zmień status zgłoszenia
-Aktor: Technik
-Opis: Status może zmienić tylko Technik przypisany do zgłoszenia. Technik zmienia status zgłoszenia na jeden z 3(W trakcie, Oczekuje, Rozwiązane), zgodnie z regułami zmian statusu.
-Powiązanie z User Story: Odpowiada trzeciej historii użytkownika(zmiana statusu i dodawanie komentarza).
+4. Dodaj komentarz
+Aktorzy: Zgłaszający, Technik, Administrator
+Opis: Aktor dodaje komentarz do danego zgłoszenia.
+Powiązanie z User Story: Odpowiada czwartej historii użytkownika(dodawanie komentarza).
 
 5. Wyświetl listę zgłoszeń
 Aktorzy: Technik, Administrator
