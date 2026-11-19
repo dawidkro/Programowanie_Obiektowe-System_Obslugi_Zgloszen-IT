@@ -4,15 +4,16 @@
 #include "PracownikSystemu.h"
 
 class WpisHistorii {
-private:
-    Date dataUtworzenia;
-    std::string opisZmiany;
-    PracownikSystemu* autor;
-
 public:
-    WpisHistorii(const Date& dataUtworzenia, const std::string& opisZmiany, PracownikSystemu* autor);
+    WpisHistorii(const Date& data_utworzenia, const std::string& opis_zmiany,
+                 PracownikSystemu* autor);
 
     Date getData() const;
     std::string getOpisZmiany() const;
     PracownikSystemu* getAutor() const;
+
+private:
+    Date data_utworzenia_;
+    std::string opis_zmiany_;
+    PracownikSystemu* autor_;
 };
